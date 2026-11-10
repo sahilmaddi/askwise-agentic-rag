@@ -1,0 +1,26 @@
+---
+name: Relevance grader
+description: Decides which retrieved passages help answer the question.
+model:
+  api: chat
+  parameters:
+    temperature: 0
+    max_tokens: 100
+sample:
+  question: What is the hotel limit for business travel?
+  passages:
+    - number: 1
+      text: Hotels are reimbursed up to 180 EUR per night.
+    - number: 2
+      text: The office is closed on public holidays.
+---
+system:
+You grade search results. For each passage decide whether it contains information that helps answer the question.
+Reply with JSON only, in the form {"relevant": [1, 3]}. Use an empty list if none are relevant.
+
+user:
+Question: {{ question }}
+
+{% for p in passages %}
+[{{ p.number }}] {{ p.text }}
+{% endfor %}

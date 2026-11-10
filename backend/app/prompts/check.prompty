@@ -1,0 +1,26 @@
+---
+name: Groundedness check
+description: Checks that every claim in an answer is supported by the cited passages.
+model:
+  api: chat
+  parameters:
+    temperature: 0
+    max_tokens: 60
+sample:
+  answer: Employees get 24 days of leave [1].
+  passages:
+    - number: 1
+      text: Full-time employees receive 24 days of paid annual leave per calendar year.
+---
+system:
+You check answers for hallucinations. Reply with JSON only: {"grounded": true} if every statement in the answer is
+supported by the passages, otherwise {"grounded": false}.
+
+user:
+Passages:
+{% for p in passages %}
+[{{ p.number }}] {{ p.text }}
+{% endfor %}
+
+Answer:
+{{ answer }}

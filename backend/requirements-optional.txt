@@ -1,0 +1,6 @@
+# Install only what you switch on.
+pymilvus==2.5.8                         # VECTOR_STORE=milvus (includes Milvus Lite)
+azure-search-documents==11.5.2          # VECTOR_STORE=azure_search
+azure-ai-documentintelligence==1.0.2    # AZURE_DOCINTEL_ENDPOINT / AZURE_DOCINTEL_KEY
+azure-monitor-opentelemetry==1.6.8      # APPLICATIONINSIGHTS_CONNECTION_STRING (Azure Monitor / AI Foundry)
+spacy==3.8.5                            # CHUNKER=sentence uses spaCy's sentencizer when installed

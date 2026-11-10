@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: askwise
+    folder: Askwise
+    type: file
+    options:
+      path: /var/lib/grafana/dashboards

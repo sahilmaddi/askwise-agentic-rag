@@ -1,0 +1,5 @@
+api_image             = "ghcr.io/<you>/askwise-api:1.0.0"
+web_image             = "ghcr.io/<you>/askwise-web:1.0.0"
+azure_openai_endpoint = "https://<your-resource>.openai.azure.com"
+azure_openai_api_key  = "<key>"
+# enable_ai_search    = true

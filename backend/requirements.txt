@@ -1,0 +1,27 @@
+# API
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+python-multipart==0.0.20
+pydantic==2.11.4
+
+# Ingestion, retrieval and prompts
+numpy==2.2.5
+pypdf==5.4.0
+httpx==0.28.1
+faiss-cpu==1.11.0
+fastembed==0.6.1
+PyYAML==6.0.2
+Jinja2==3.1.6
+
+# Model providers (LangChain integrations)
+langchain-core==0.3.59
+langchain-openai==0.3.16
+langchain-ollama==0.3.2
+langchain-mistralai==0.2.10
+langchain-cohere==0.4.4
+
+# Observability
+opentelemetry-api==1.33.0
+opentelemetry-sdk==1.33.0
+opentelemetry-exporter-otlp-proto-http==1.33.0
+opentelemetry-instrumentation-fastapi==0.54b0
